@@ -25,7 +25,6 @@ module.exports.getProducts = async (req, res) => {
     try {
         const productPromises = ecomCompanies.map(async (company) => {
             const url = `http://20.244.56.144/test/companies/${company}/categories/${categoryname}/products?top=${limit}&minPrice=${minPrice}&maxPrice=${maxPrice}`
-            console.log(url);
             try {
                 const response = await axios.get(url, {
                     headers: {
