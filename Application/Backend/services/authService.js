@@ -12,7 +12,7 @@ const authService = {
         };
 
         const response = await axios.post('http://20.244.56.144/test/auth', payload);
-        return response.data.token;
+        return response.data.access_token;
     }
 };
 
